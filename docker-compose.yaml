@@ -1,0 +1,13 @@
+## plotlyの使い捨て環境構築。
+version: '3'
+
+services:
+  plotly:
+    container_name: plotly
+    build: .
+    tty: true
+    privileged: true
+    volumes:
+      - ./glaph:/usr/glaph
+    #ports:
+    #  - 3000:3000  ## reactjs? でアプリを作る場合defaultのport3000. 
